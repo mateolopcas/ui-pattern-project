@@ -1,0 +1,217 @@
+body {
+    background-color: #8D99AE;
+    text-align: center;
+}
+
+.contentDiv {
+    background-color: #2B2D42;
+    color: #EDF2F4;
+    border: 2px ridge #D90429;
+}
+
+.liquorInfo {
+    padding: 10px 20px
+}
+
+.liquorInfo h2 {
+    font-size: 32px;
+}
+
+.abv {
+    font-size: 24px;
+}
+
+.description {
+    text-align: left;
+}
+
+.drinksDiv {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    column-gap: 20px;
+}
+
+.drink {
+    border: 2px ridge #D90429;
+    margin: 20px auto;
+    width: 350px;
+    height: 400px;
+    background-size: cover;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.drink h3 {
+    font-size: 30px;
+    color: black;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+header {
+    text-align: center;
+}
+
+header h1 {
+    text-align: center;
+    border: 2px ridge #2B2D42;
+    display: inline-block;
+    padding: .5em 1em;
+    background-color: #EF233C;
+}
+
+.hamburger {
+    position: fixed;
+    z-index: 100;
+    top: 3rem;
+    right: 1rem;
+    padding: 4px;
+    border: black solid 1px;
+    background: white;
+    cursor: pointer;
+}
+
+
+
+.menu {
+    position: fixed;
+    transform: translateX(100%);
+    transition: transform 0.2s;
+    top: 2rem;
+    right: 0;
+    width: 25vh;
+    height: 50vh;
+    z-index: 99;
+    background: black;
+    color: white;
+    list-style: none;
+    padding-top: 4rem;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column;
+    border-radius: 20px 0 0 20px;
+}
+
+.menuItem {
+    font-size: 24px;
+    text-decoration: none;
+    color: white;
+    background: inherit;
+    border: 0;
+    margin: 0 0 30px 0;
+}
+
+
+.closeIcon {
+    display: none;
+}
+
+.showMenu {
+    transform: translateX(0);
+}
+
+@keyframes highlight {
+    from {color: white;
+         font-size: 26px;}
+    to  {color: red;
+        font-size: 32px;}
+}
+
+.highlighted {
+    animation-name: highlight;
+    animation-duration: 0.4s;
+    font-size: 32px;
+    color: red;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    max-width: 100%;
+    height: 500px;
+    max-height: 100%;
+    z-index: 201;
+    background: #8D99AE;
+
+}
+
+.closed {
+    display: none;
+}
+
+.modal-guts {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 2fr;
+}
+
+.modal-guts img {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 3;
+    height: 100%;
+    max-height: 100%;
+    width: 100%;
+    max-width: 100%;
+}
+
+.modal-guts h2 {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: center;
+    font-size: 28px;
+}
+
+.modal-guts p {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: center;
+    text-align: left;
+    font-size: 22px;
+    padding: 0 1em;
+}
+
+.modal-guts ul {
+    grid-column: 2;
+    grid-row: 3;
+    list-style-type: none;
+    align-self: center;
+    font-size: 22px;
+    text-align: left;
+    padding: 0 1em;
+}
+
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 200;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    border: solid 1px black;
+    background: black;
+    color: white;
+    cursor: pointer;
+    z-index: 202;
+}
+

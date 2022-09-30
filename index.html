@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Cocktail database</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body>
+        <script src="script.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <header>
+            <h1>Cocktail Info</h1>
+        </header>
+        <main>
+            <ul class="menu">
+                <li><button class='menuItem' type='button' name='vodka'>Vodka</button></li>
+                <li><button class='menuItem' type='button' name='rum'>Rum</button></li>
+                <li><button class='menuItem' type='button' name='tequila'>Tequila</button></li>
+                <li><button class='menuItem' type='button' name='gin'>Gin</button></li>
+                <li><button class='menuItem' type='button' name='amaretto'>Amaretto</button></li>
+            </ul>
+            <button class='hamburger'>
+                <i class='menuIcon material-icons'>menu</i>
+                <i class='closeIcon material-icons' style='display: none'>close</i>
+            </button>
+            <div class='contentDiv'>
+                <div class='liquorDiv'>
+                    <h2>Click the menu on the right and select a liquor</h2>
+                </div>
+                <div class='drinksDiv'></div>
+            </div>
+        </main>
+        <div class='modal closed' id='modal'>
+            <button class='modal-close' type='button'>
+                <i class='material-icons'>close</i>
+            </button>
+            <div class='modal-guts'>
+            </div>
+        </div>
+        <div class='modal-overlay closed' id='modal-overlay'></div>
+    </body>
+</html>
