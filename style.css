@@ -225,10 +225,14 @@ header h1 {
 
 @keyframes openModal {
     from {
+        left: 25%;
+        top: 25%;
         transform: scale(0) translate(0%, 0%);
         opacity: 0;
     }
     to {
+        left: 50%;
+        top: 50%;
         transform: scale(1) translate(-50%, -50%);
         opacity: 1;
     }
@@ -236,10 +240,14 @@ header h1 {
 
 @keyframes closeModal {
     from {
+        left: 50%;
+        top: 50%;
         transform: scale(1) translate(-50%, -50%);
         opacity: 1;
     }
     to {
+        left: 25%;
+        top: 25%;
         transform: scale(0) translate(0%, 0%);
         opacity: 0;
     }
